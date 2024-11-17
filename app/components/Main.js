@@ -8,6 +8,9 @@ import p2 from "../../public/p2.png";
 import warn from "../../public/warn.png";
 import indi from "../../public/indi.png";
 import tick from "../../public/tick.png";
+import time from "../../public/time.png";
+import date from "../../public/date.png";
+import eye from "../../public/eye.png";
 
 import React, { useState } from "react";
 
@@ -96,9 +99,11 @@ const Main = () => {
                   Hard Deadline
                 </span>
 
-                <span className="text-gray-500 text-sm">
+                <span className="flex items-center text-gray-500 text-sm">
+                  <Image src={date} alt="date" className="w-5" />
                   Oct 2024 - Dec 2024
                 </span>
+
                 <div className="w-20 bg-teal-100 rounded-full h-2">
                   <div
                     className="bg-teal-500 h-2 rounded-full"
@@ -126,16 +131,27 @@ const Main = () => {
                 </span>
                 <div className="flex items-center gap-3 ml-4">
                   <div className="flex items-center gap-1">
-                    <span className="text-sm text-gray-500">Target:</span>
-                    <span className="text-sm">100 Employees</span>
+                    <span className="flex items-center text-sm text-gray-500">
+                      <Image src={eye} alt="eye" className="w-6" />
+                      Target:
+                    </span>
+
+                    <span className="text-sm text-black">100 Employees</span>
                   </div>
                   <div className="flex items-center gap-1">
+                    <span>
+                      <Image src={tick} alt="tick" className="w-7" />
+                    </span>
                     <span className="text-sm text-gray-500">Achievement:</span>
-                    <span className="text-sm">70 Employees</span>
+                    <span className="text-sm text-black">70 Employees</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <span className="text-sm text-gray-500">Remain:</span>
-                    <span className="text-sm">30 Employees</span>
+                    <span className="flex items-center text-sm text-gray-500">
+                      {" "}
+                      <Image src={time} alt="time" className="w-6" />
+                      Remain:
+                    </span>
+                    <span className="text-sm text-black">30 Employees</span>
                   </div>
                 </div>
               </div>
@@ -148,16 +164,27 @@ const Main = () => {
                 </span>
                 <div className="flex items-center gap-3 ml-4">
                   <div className="flex items-center gap-1">
-                    <span className="text-sm text-gray-500">Target:</span>
-                    <span className="text-sm">100 Employees</span>
+                    <span className="flex items-center text-sm text-gray-500">
+                      <Image src={eye} alt="eye" className="w-6" />
+                      Target:
+                    </span>
+
+                    <span className="text-sm text-black">100 Employees</span>
                   </div>
                   <div className="flex items-center gap-1">
+                    <span>
+                      <Image src={tick} alt="tick" className="w-7" />
+                    </span>
                     <span className="text-sm text-gray-500">Achievement:</span>
-                    <span className="text-sm">70 Employees</span>
+                    <span className="text-sm text-black">70 Employees</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <span className="text-sm text-gray-500">Remain:</span>
-                    <span className="text-sm">30 Employees</span>
+                    <span className="flex items-center text-sm text-gray-500">
+                      {" "}
+                      <Image src={time} alt="time" className="w-6" />
+                      Remain:
+                    </span>
+                    <span className="text-sm text-black">30 Employees</span>
                   </div>
                 </div>
               </div>
@@ -189,7 +216,8 @@ const Main = () => {
                   Hard Deadline
                 </span>
 
-                <span className="text-gray-500 text-sm">
+                <span className="flex items-center text-gray-500 text-sm">
+                  <Image src={date} alt="date" className="w-5" />
                   Sept 2024 - Dec 2024
                 </span>
                 <div className="w-20 bg-teal-100 rounded-full h-2">
@@ -226,9 +254,11 @@ const Main = () => {
                   Hard Deadline
                 </span>
 
-                <span className="text-gray-500 text-sm">
+                <span className="flex items-center text-gray-500 text-sm">
+                  <Image src={date} alt="date" className="w-5" />
                   Sept 2024 - Dec 2024
                 </span>
+
                 <div className="w-20 bg-teal-100 rounded-full h-2">
                   <div
                     className="bg-teal-500 h-2 rounded-full"
