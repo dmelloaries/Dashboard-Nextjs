@@ -1,13 +1,15 @@
-"use client"
+"use client";
 import Image from "next/image";
 import filter from "../../public/filter.png";
-import r1 from "../../public/r1.png";
-import r2 from "../../public/r2.png";
-import r3 from "../../public/r3.png";
-import a1 from "../../public/a1.png";
-import a2 from "../../public/a2.png";
+import aim from "../../public/aim.png";
+import grow from "../../public/grow.png";
+import p1 from "../../public/p1.png";
+import p2 from "../../public/p2.png";
+import warn from "../../public/warn.png";
+import indi from "../../public/indi.png";
+import tick from "../../public/tick.png";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import { ChevronDown, ChevronRight } from "lucide-react";
 
@@ -18,9 +20,9 @@ const Main = () => {
   });
 
   const toggleExpand = (itemId) => {
-    setExpandedItems(prev => ({
+    setExpandedItems((prev) => ({
       ...prev,
-      [itemId]: !prev[itemId]
+      [itemId]: !prev[itemId],
     }));
   };
 
@@ -71,39 +73,57 @@ const Main = () => {
       <div className="space-y-2">
         {/* First Main Item */}
         <div className="bg-gray-50 rounded-lg">
-          <div 
+          <div
             className="p-4 flex items-center cursor-pointer"
-            onClick={() => toggleExpand('item1')}
+            onClick={() => toggleExpand("item1")}
           >
             <button className="mr-2">
-              {expandedItems.item1 ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+              {expandedItems.item1 ? (
+                <ChevronDown size={20} />
+              ) : (
+                <ChevronRight size={20} />
+              )}
             </button>
-            <Image src={r1} alt="icon" className="w-6 h-6 mr-3" />
+            <Image src={aim} alt="icon" className="w-6 h-6 mr-3" />
             <div className="flex-1">
               <div className="flex items-center gap-4">
-                <h3 className="font-medium">Hire Top Tier Software Development for IT Team</h3>
-                <span className="text-red-500 text-sm">Hard Deadline</span>
-                <span className="text-gray-500 text-sm">Oct 2024 - Dec 2024</span>
+                <h3 className="font-medium text-black">
+                  Hire Top Tier Software Development for IT Team
+                </h3>
+
+                <span className="flex items-center text-red-500 text-sm">
+                  <Image src={warn} alt="warn" className="w-7 h-auto" />
+                  Hard Deadline
+                </span>
+
+                <span className="text-gray-500 text-sm">
+                  Oct 2024 - Dec 2024
+                </span>
                 <div className="w-20 bg-teal-100 rounded-full h-2">
-                  <div className="bg-teal-500 h-2 rounded-full" style={{width: '24%'}}></div>
+                  <div
+                    className="bg-teal-500 h-2 rounded-full"
+                    style={{ width: "24%" }}
+                  ></div>
                 </div>
                 <span className="text-gray-700">24%</span>
                 <div className="flex items-center gap-2 ml-auto">
-                  <Image src={r1} alt="user" className="w-6 h-6 rounded-full" />
+                  <Image src={p1} alt="user" className="w-6 h-6 rounded-full" />
                   <span className="text-sm text-gray-600">Sara Ali Khan</span>
                   <span className="text-sm text-gray-500">Individual</span>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Dropdown Content */}
           {expandedItems.item1 && (
             <div className="pl-12 pb-4 space-y-3">
               {/* Sub Item 1 */}
               <div className="flex items-center gap-4 p-3 bg-white rounded-lg">
-                <Image src={a1} alt="icon" className="w-6 h-6" />
-                <span className="font-medium">Hire 100 Top Tier Software Development Employee</span>
+                <Image src={grow} alt="icon" className="w-6 h-6" />
+                <span className="font-medium text-black">
+                  Hire 100 Top Tier Software Development Employee
+                </span>
                 <div className="flex items-center gap-3 ml-4">
                   <div className="flex items-center gap-1">
                     <span className="text-sm text-gray-500">Target:</span>
@@ -122,8 +142,10 @@ const Main = () => {
 
               {/* Sub Item 2 */}
               <div className="flex items-center gap-4 p-3 bg-white rounded-lg">
-                <Image src={a2} alt="icon" className="w-6 h-6" />
-                <span className="font-medium">Hire 100 Top Tier Software Development Employee</span>
+                <Image src={grow} alt="icon" className="w-6 h-6" />
+                <span className="font-medium text-black">
+                  Hire 100 Top Tier Software Development Employee
+                </span>
                 <div className="flex items-center gap-3 ml-4">
                   <div className="flex items-center gap-1">
                     <span className="text-sm text-gray-500">Target:</span>
@@ -145,25 +167,40 @@ const Main = () => {
 
         {/* Second Main Item */}
         <div className="bg-gray-50 rounded-lg">
-          <div 
+          <div
             className="p-4 flex items-center cursor-pointer"
-            onClick={() => toggleExpand('item2')}
+            onClick={() => toggleExpand("item2")}
           >
             <button className="mr-2">
-              {expandedItems.item2 ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+              {expandedItems.item2 ? (
+                <ChevronDown size={20} />
+              ) : (
+                <ChevronRight size={20} />
+              )}
             </button>
-            <Image src={r2} alt="icon" className="w-6 h-6 mr-3" />
+            <Image src={aim} alt="icon" className="w-6 h-6 mr-3" />
             <div className="flex-1">
               <div className="flex items-center gap-4">
-                <h3 className="font-medium">Sell 120 Security Data Dog Software</h3>
-                <span className="text-red-500 text-sm">Hard Deadline</span>
-                <span className="text-gray-500 text-sm">Sept 2024 - Dec 2024</span>
+                <h3 className="font-medium text-black">
+                  Sell 120 Security Data Dog Software
+                </h3>
+                <span className="flex items-center text-red-500 text-sm">
+                  <Image src={warn} alt="warn" className="w-7 h-auto" />
+                  Hard Deadline
+                </span>
+
+                <span className="text-gray-500 text-sm">
+                  Sept 2024 - Dec 2024
+                </span>
                 <div className="w-20 bg-teal-100 rounded-full h-2">
-                  <div className="bg-teal-500 h-2 rounded-full" style={{width: '65%'}}></div>
+                  <div
+                    className="bg-teal-500 h-2 rounded-full"
+                    style={{ width: "65%" }}
+                  ></div>
                 </div>
                 <span className="text-gray-700">65%</span>
                 <div className="flex items-center gap-2 ml-auto">
-                  <Image src={r2} alt="user" className="w-6 h-6 rounded-full" />
+                  <Image src={p2} alt="user" className="w-6 h-6 rounded-full" />
                   <span className="text-sm text-gray-600">Raline Syah</span>
                   <span className="text-sm text-gray-500">Individual</span>
                 </div>
@@ -178,18 +215,29 @@ const Main = () => {
             <button className="mr-2">
               <ChevronRight size={20} />
             </button>
-            <Image src={r3} alt="icon" className="w-6 h-6 mr-3" />
+            <Image src={aim} alt="icon" className="w-6 h-6 mr-3" />
             <div className="flex-1">
               <div className="flex items-center gap-4">
-                <h3 className="font-medium">Sell 120 Security Data Dog Software</h3>
-                <span className="text-red-500 text-sm">Hard Deadline</span>
-                <span className="text-gray-500 text-sm">Sept 2024 - Dec 2024</span>
+                <h3 className="font-medium text-black">
+                  Sell 120 Security Data Dog Software
+                </h3>
+                <span className="flex items-center text-red-500 text-sm">
+                  <Image src={warn} alt="warn" className="w-7 h-auto" />
+                  Hard Deadline
+                </span>
+
+                <span className="text-gray-500 text-sm">
+                  Sept 2024 - Dec 2024
+                </span>
                 <div className="w-20 bg-teal-100 rounded-full h-2">
-                  <div className="bg-teal-500 h-2 rounded-full" style={{width: '65%'}}></div>
+                  <div
+                    className="bg-teal-500 h-2 rounded-full"
+                    style={{ width: "65%" }}
+                  ></div>
                 </div>
                 <span className="text-gray-700">65%</span>
                 <div className="flex items-center gap-2 ml-auto">
-                  <Image src={r3} alt="user" className="w-6 h-6 rounded-full" />
+                  <Image src={p2} alt="user" className="w-6 h-6 rounded-full" />
                   <span className="text-sm text-gray-600">Raline Syah</span>
                   <span className="text-sm text-gray-500">Individual</span>
                 </div>
